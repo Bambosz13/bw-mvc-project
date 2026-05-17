@@ -6,12 +6,8 @@ namespace MvcProject.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index(string key)
+        public IActionResult Index()
         {
-            if (key != "TajneHaslo123")
-            {
-                return Unauthorized("Odmowa dostępu. Wymagany prawidłowy klucz weryfikacyjny.");
-            }
             var data = new ChartData
             {
                 Labels = new[] { "Styczeń", "Luty", "Marzec", "Kwiecień" },
